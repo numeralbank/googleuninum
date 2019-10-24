@@ -1,0 +1,15 @@
+{
+    "id": "googleuninum",
+    "title": "UniNum",
+    "description": "A collection of numerals ranging between 0 and 100000000000 (inclusive), provided by Google and language experts.",
+    "license": "https://www.apache.org/licenses/LICENSE-2.0",
+    "url": "https://github.com/google/uninum",
+    "citation": null,
+    "aboutUrl": null,
+    "conceptlist": ["Ritchie-2019-110"],
+    "lingpy_schema": null,
+    "derived_from": null,
+    "related": null,
+    "source": null,
+    "patron": null
+}
