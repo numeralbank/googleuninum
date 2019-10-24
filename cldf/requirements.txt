@@ -11,7 +11,7 @@ decorator==4.4.0
 idna==2.8
 isodate==0.6.0
 jdcal==1.4.1
--e git+https://github.com/lexibank/googleuninum@bea966f67ed3cdf1accc7619b0bb74caf602787a#egg=lexibank_googleuninum
+-e git+https://github.com/lexibank/googleuninum@2357b8b8d239cbb0a146cc73cf3fe2577a2476ca#egg=lexibank_googleuninum
 lingpy==2.6.5
 Markdown==3.1.1
 networkx==2.1

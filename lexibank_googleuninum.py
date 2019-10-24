@@ -33,44 +33,54 @@ class Dataset(BaseDataset):
         rmtree(p / ".git", ignore_errors=True)
 
     def cmd_makecldf(self, args):
-        languages, concepts = {}, {}
-        numbers = list((self.raw_dir / "uninumrepo" / "numbers/").glob("**/*.tsv"))
+        languages, concepts = [], {}
+        number_files = sorted(list((self.raw_dir / "uninumrepo" / "numbers/").glob("**/*.tsv")))
+        codes = self.raw_dir / "uninumrepo" / "codes.tsv"
+        args.writer.add_sources()
 
-        for language in self.languages:
+        for code in self.raw_dir.read_csv(codes, delimiter="\t", dicts=True):
+            # We add additional Glottocodes based on languages.tsv wherever applicable:
+            substitute = list(filter(lambda y: y["Code"] == code["Code"], self.languages))
+
             args.writer.add_language(
-                ID=language["Code"],
-                Name=language["Language name(s)"],
-                Glottocode=language["Glottocode"],
-                ISO639P3code=language["ISO 639-3"],
-                Script=language["Script"],
-                Locale=language["Locale"],
-                Ethnologue=language["Ethnologue"],
-                Variety=language["Variety"],
+                ID=code["Code"],
+                Name=code["Language name(s)"],
+                Glottocode=substitute[0]["Glottocode"] if substitute else code["Glottocode"],
+                ISO639P3code=code["ISO 639-3"],
+                Script=code["Script"],
+                Locale=code["Locale"],
+                Ethnologue=code["Ethnologue"],
+                Variety=code["Variety"],
             )
-            languages[language["Code"]] = language["Language name(s)"]
+            languages.append(code["Code"])
 
-        for concept in self.concepts:
-            args.writer.add_concept(
-                ID=concept["GLOSS"],
-                Name=concept["GLOSS"],
-                Concepticon_ID=concept["CONCEPTICON_ID"],
-                Concepticon_Gloss=concept["CONCEPTICON_GLOSS"],
-            )
-            concepts[concept["GLOSS"]] = concept["GLOSS"]
+        for concept in self.conceptlist.concepts.values():
+            concepts[str(concept.english)] = concept.id
 
-        for number_file in pb(numbers, desc=""):
+        args.writer.add_concepts(id_factory=lambda c: c.id)
+
+        for number_file in pb(number_files, desc=""):
             lcode = number_file.name.split(".tsv")[0]
 
-            # TODO: Arabic etc?
+            # There are two issues at play here. First, ary (no diacritics), ary (diacritics), bho
+            # and arz do not have immediately obvious corresponding files. Second, there is a file
+            # arx.tsv that doesn't have an immediately obvious corresponding language entry.
+            # I assume that ary (both versions) and arz relate to Arabic.
+            # TODO: Try and resolve this upstream.
             if lcode not in languages:
-                break
+                continue
 
-            f = self.raw_dir.read_csv(number_file, delimiter="\t")
-            for entry in f:
+            for entry in self.raw_dir.read_csv(number_file, delimiter="\t"):
                 # entry[0] is the concept.
                 # entry[1] is the lexeme.
-                if entry[0] not in concepts:  # TODO: Change after concept list has been added.
-                    break
-                args.writer.add_lexemes(
-                    Language_ID=lcode, Parameter_ID=concepts[entry[0]], Value=entry[1]
-                )
+
+                # TODO: Check "1000000000000".
+                # We need to double check this in the concept list and the upstream data.
+                # Apparently, there is exactly one entry for "1000000000000" in est.tsv.
+                if entry[0] != "1000000000000":
+                    args.writer.add_lexemes(
+                        Language_ID=lcode,
+                        Parameter_ID=concepts[entry[0]],
+                        Value=entry[1],
+                        Source="Ritchie2019",
+                    )

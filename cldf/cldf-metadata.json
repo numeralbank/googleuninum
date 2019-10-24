@@ -2,9 +2,15 @@
     "@context": "http://www.w3.org/ns/csvw",
     "aboutUrl": null,
     "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Wordlist",
-    "dc:identifier": "https://github.com/lexibank/googleuninum",
+    "dc:description": "A collection of numerals ranging between 0 and 100000000000 (inclusive), provided by Google and language experts.",
+    "dc:format": [
+        "http://concepticon.clld.org/contributions/Ritchie-2019-110"
+    ],
+    "dc:identifier": "https://github.com/google/uninum",
     "dc:isVersionOf": null,
+    "dc:license": "http://www.apache.org/licenses/LICENSE-2.0",
     "dc:related": null,
+    "dc:source": "sources.bib",
     "dc:title": "UniNum",
     "dcat:accessURL": "https://github.com/lexibank/googleuninum",
     "prov:wasDerivedFrom": [
@@ -12,19 +18,19 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/lexibank/googleuninum",
-            "dc:created": "bea966f"
+            "dc:created": "2357b8b"
         },
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Glottolog",
             "rdf:about": "git@github.com:glottolog/glottolog",
-            "dc:created": "v4.0"
+            "dc:created": "v4.0-56-g185d304cba"
         },
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Concepticon",
             "rdf:about": "git@github.com:concepticon/concepticon-data",
-            "dc:created": "v2.1.0"
+            "dc:created": "v2.1.0-104-g9190b75"
         }
     ],
     "prov:wasGeneratedBy": [
@@ -45,7 +51,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
-            "dc:extent": 1224,
+            "dc:extent": 19873,
             "tableSchema": {
                 "columns": [
                     {
@@ -140,7 +146,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
-            "dc:extent": 102,
+            "dc:extent": 182,
             "tableSchema": {
                 "columns": [
                     {
@@ -226,7 +232,7 @@
         },
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#ParameterTable",
-            "dc:extent": 12,
+            "dc:extent": 110,
             "tableSchema": {
                 "columns": [
                     {
