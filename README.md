@@ -9,7 +9,7 @@ Available online at https://github.com/google/uninum
 
 
 Conceptlists in Concepticon:
-- [Ritchie-2019-110](https://concepticon.clld.org/contributions/Ritchie-2019-110)
+- [Ritchie-2019-111](https://concepticon.clld.org/contributions/Ritchie-2019-111)
 ## Statistics
 
 
@@ -19,7 +19,7 @@ Conceptlists in Concepticon:
 ![Source: 100%](https://img.shields.io/badge/Source-100%25-brightgreen.svg "Source: 100%")
 
 - **Varieties:** 182
-- **Concepts:** 110
-- **Lexemes:** 19,873
+- **Concepts:** 111
+- **Lexemes:** 19,874
 - **Sources:** 1
 - **Synonymy:** 1.01
