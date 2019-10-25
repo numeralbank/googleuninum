@@ -5,7 +5,7 @@ import attr
 from git import Repo
 from pylexibank import Language
 from pylexibank.dataset import Dataset as BaseDataset
-from pylexibank.util import pb
+from pylexibank.util import progressbar
 
 
 @attr.s
@@ -33,10 +33,12 @@ class Dataset(BaseDataset):
         rmtree(p / ".git", ignore_errors=True)
 
     def cmd_makecldf(self, args):
-        languages, concepts = [], {}
+        languages = []
         number_files = sorted(list((self.raw_dir / "uninumrepo" / "numbers/").glob("**/*.tsv")))
         codes = self.raw_dir / "uninumrepo" / "codes.tsv"
         args.writer.add_sources()
+        # I think that "0" is a better Parameter_ID here than ZERO, ONE, TWO, etc.?
+        concepts = args.writer.add_concepts(id_factory=lambda c: c.english, lookup_factory="Name")
 
         for code in self.raw_dir.read_csv(codes, delimiter="\t", dicts=True):
             # We add additional Glottocodes based on languages.tsv wherever applicable:
@@ -54,12 +56,7 @@ class Dataset(BaseDataset):
             )
             languages.append(code["Code"])
 
-        for concept in self.conceptlist.concepts.values():
-            concepts[str(concept.english)] = concept.id
-
-        args.writer.add_concepts(id_factory=lambda c: c.id)
-
-        for number_file in pb(number_files, desc=""):
+        for number_file in progressbar(number_files):
             lcode = number_file.name.split(".tsv")[0]
 
             # There are two issues at play here. First, ary (no diacritics), ary (diacritics), bho

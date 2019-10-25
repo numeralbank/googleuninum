@@ -18,7 +18,7 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/lexibank/googleuninum",
-            "dc:created": "2357b8b"
+            "dc:created": "2ba7387"
         },
         {
             "rdf:type": "prov:Entity",
@@ -31,6 +31,12 @@
             "dc:title": "Concepticon",
             "rdf:about": "git@github.com:concepticon/concepticon-data",
             "dc:created": "v2.1.0-104-g9190b75"
+        },
+        {
+            "rdf:type": "prov:Entity",
+            "dc:title": "CLTS",
+            "rdf:about": "https://github.com/cldf-clts/clts",
+            "dc:created": "v1.4"
         }
     ],
     "prov:wasGeneratedBy": [
