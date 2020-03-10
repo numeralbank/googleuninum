@@ -18,19 +18,19 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/lexibank/googleuninum",
-            "dc:created": "511fcf0"
+            "dc:created": "de012d1"
         },
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Glottolog",
-            "rdf:about": "git@github.com:glottolog/glottolog",
-            "dc:created": "v4.0-56-g185d304cba"
+            "rdf:about": "https://github.com/glottolog/glottolog",
+            "dc:created": "v4.1-36-g046c6313ee"
         },
         {
             "rdf:type": "prov:Entity",
             "dc:title": "Concepticon",
-            "rdf:about": "git@github.com:concepticon/concepticon-data",
-            "dc:created": "v2.1.0-105-g9cf2c2e"
+            "rdf:about": "https://github.com/concepticon/concepticon-data",
+            "dc:created": "v2.2.1a-305-g9f25da5"
         },
         {
             "rdf:type": "prov:Entity",
@@ -42,7 +42,7 @@
     "prov:wasGeneratedBy": [
         {
             "dc:title": "python",
-            "dc:description": "3.7.3"
+            "dc:description": "3.7.5"
         },
         {
             "dc:title": "python-packages",
@@ -57,7 +57,7 @@
     "tables": [
         {
             "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#FormTable",
-            "dc:extent": 19874,
+            "dc:extent": 19877,
             "tableSchema": {
                 "columns": [
                     {

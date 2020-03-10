@@ -20,6 +20,6 @@ Conceptlists in Concepticon:
 
 - **Varieties:** 182
 - **Concepts:** 111
-- **Lexemes:** 19,874
+- **Lexemes:** 19,877
 - **Sources:** 1
 - **Synonymy:** 1.01

@@ -9,7 +9,7 @@ from pylexibank.util import progressbar
 
 
 @attr.s
-class UniNumLanguage(Language):
+class CustomLanguage(Language):
     Code = attr.ib(default=None)
     Script = attr.ib(default=None)
     Locale = attr.ib(default=None)
@@ -20,7 +20,7 @@ class UniNumLanguage(Language):
 class Dataset(BaseDataset):
     dir = Path(__file__).parent
     id = "googleuninum"
-    language_class = UniNumLanguage
+    language_class = CustomLanguage
 
     def cmd_download(self, args):
         # We need to clone into a folder in raw/ to avoid git shenanigans.
@@ -37,7 +37,6 @@ class Dataset(BaseDataset):
         number_files = sorted(list((self.raw_dir / "uninumrepo" / "numbers/").glob("**/*.tsv")))
         codes = self.raw_dir / "uninumrepo" / "codes.tsv"
         args.writer.add_sources()
-        # I think that "0" is a better Parameter_ID here than ZERO, ONE, TWO, etc.?
         concepts = args.writer.add_concepts(id_factory=lambda c: c.english, lookup_factory="Name")
 
         for code in self.raw_dir.read_csv(codes, delimiter="\t", dicts=True):
@@ -58,14 +57,6 @@ class Dataset(BaseDataset):
 
         for number_file in progressbar(number_files):
             lcode = number_file.name.split(".tsv")[0]
-
-            # There are two issues at play here. First, ary (no diacritics), ary (diacritics), bho
-            # and arz do not have immediately obvious corresponding files. Second, there is a file
-            # arx.tsv that doesn't have an immediately obvious corresponding language entry.
-            # I assume that ary (both versions) and arz relate to Arabic.
-            # TODO: Try and resolve this upstream.
-            if lcode not in languages:
-                continue
 
             for entry in self.raw_dir.read_csv(number_file, delimiter="\t"):
                 # entry[0] is the concept.
