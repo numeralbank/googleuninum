@@ -46,6 +46,7 @@ class Dataset(BaseDataset):
             args.writer.add_language(
                 ID=code["Code"],
                 Name=code["Language name(s)"],
+                Code=code["Code"],
                 Glottocode=substitute[0]["Glottocode"] if substitute else code["Glottocode"],
                 ISO639P3code=code["ISO 639-3"],
                 Script=code["Script"],
