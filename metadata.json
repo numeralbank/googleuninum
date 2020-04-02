@@ -4,7 +4,7 @@
     "description": "A collection of numerals ranging between 0 and 100000000000 (inclusive), provided by Google and language experts.",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "url": "https://github.com/google/uninum",
-    "citation": null,
+    "citation": "Ritchie, S., Sproat, R., Gorman, K., van Esch, D., Schallhart, C., Bampounis, N., Brard, B., Mortensen, J. F., Holt, M., and Mahon, E. 2019. Unified verbalization for speech recognition & synthesis across languages. In Proc. INTERSPEECH, pages 3530-3534.",
     "aboutUrl": null,
     "conceptlist": ["Ritchie-2019-111"],
     "lingpy_schema": null,

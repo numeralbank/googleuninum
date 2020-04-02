@@ -1,5 +1,9 @@
 # UniNum
 
+Cite the source dataset as
+
+> Ritchie, S., Sproat, R., Gorman, K., van Esch, D., Schallhart, C., Bampounis, N., Brard, B., Mortensen, J. F., Holt, M., and Mahon, E. 2019. Unified verbalization for speech recognition & synthesis across languages. In Proc. INTERSPEECH, pages 3530-3534.
+
 
 A collection of numerals ranging between 0 and 100000000000 (inclusive), provided by Google and language experts.
 
@@ -23,3 +27,10 @@ Conceptlists in Concepticon:
 - **Lexemes:** 19,877
 - **Sources:** 1
 - **Synonymy:** 1.01
+
+# Contributors
+
+Name | GitHub user | Role
+ --- | --- | --- 
+Christoph Rzymski | @chrzyki | maintainer
+
