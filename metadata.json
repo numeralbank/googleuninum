@@ -1,6 +1,6 @@
 {
     "id": "googleuninum",
-    "title": "UniNum",
+    "title": "CLDF dataset derived from Ritchie et al.'s \"UniNum: A Database of Number Names for 186 Languages\" from 2019",
     "description": "A collection of numerals ranging between 0 and 100000000000 (inclusive), provided by Google and language experts.",
     "license": "https://www.apache.org/licenses/LICENSE-2.0",
     "url": "https://github.com/google/uninum",

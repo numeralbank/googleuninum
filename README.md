@@ -1,4 +1,4 @@
-# UniNum
+# CLDF dataset derived from Ritchie et al.'s "UniNum: A Database of Number Names for 186 Languages" from 2019
 
 Cite the source dataset as
 
