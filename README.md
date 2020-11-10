@@ -7,7 +7,7 @@ Cite the source dataset as
 
 A collection of numerals ranging between 0 and 100000000000 (inclusive), provided by Google and language experts.
 
-This dataset is licensed under a https://www.apache.org/licenses/LICENSE-2.0 license
+This dataset is licensed under a CC-BY-4.0 license
 
 Available online at https://github.com/google/uninum
 
@@ -32,5 +32,6 @@ Conceptlists in Concepticon:
 
 Name | GitHub user | Description | Role
  --- | --- | --- | --- 
-Christoph Rzymski | @chrzyki | patron, code | Author
+Christoph Rzymski | @chrzyki | patron, code | Other
+
 

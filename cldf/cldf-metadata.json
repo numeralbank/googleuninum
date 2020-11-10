@@ -9,7 +9,7 @@
     ],
     "dc:identifier": "https://github.com/google/uninum",
     "dc:isVersionOf": null,
-    "dc:license": "http://www.apache.org/licenses/LICENSE-2.0",
+    "dc:license": "https://creativecommons.org/licenses/by/4.0/",
     "dc:related": null,
     "dc:source": "sources.bib",
     "dc:title": "CLDF dataset derived from Ritchie et al.'s \"UniNum: A Database of Number Names for 186 Languages\" from 2019",
@@ -19,7 +19,7 @@
             "rdf:type": "prov:Entity",
             "dc:title": "Repository",
             "rdf:about": "https://github.com/numeralbank/googleuninum",
-            "dc:created": "6a98716"
+            "dc:created": "6ee36df"
         },
         {
             "rdf:type": "prov:Entity",

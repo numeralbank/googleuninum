@@ -2,4 +2,4 @@
 
 Name | GitHub user | Description | Role
  --- | --- | --- | --- 
-Christoph Rzymski | @chrzyki | patron, code | Author
+Christoph Rzymski | @chrzyki | patron, code | Other

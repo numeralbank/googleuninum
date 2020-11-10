@@ -5,12 +5,13 @@
         "cldf:Wordlist",
         "linguistics"
     ],
-    "creators": [
+    "creators": [],
+    "contributors": [
         {
-            "name": "Christoph Rzymski"
+            "name": "Christoph Rzymski",
+            "type": "Other"
         }
     ],
-    "contributors": [],
     "communities": [
         {
             "identifier": "lexibank"
@@ -19,6 +20,6 @@
     "upload_type": "dataset",
     "description": "<p>Cite the source of the dataset as:</p>\n\n<blockquote>\n<p>Ritchie, S., Sproat, R., Gorman, K., van Esch, D., Schallhart, C., Bampounis, N., Brard, B., Mortensen, J. F., Holt, M., and Mahon, E. 2019. Unified verbalization for speech recognition &amp; synthesis across languages. In Proc. INTERSPEECH, pages 3530-3534.</p>\n</blockquote>",
     "license": {
-        "id": "Apache-2.0"
+        "id": "CC-BY-4.0"
     }
 }
