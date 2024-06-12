@@ -1,5 +1,7 @@
 # CLDF dataset derived from Ritchie et al.'s "UniNum: A Database of Number Names for 186 Languages" from 2019
 
+[![CLDF validation](https://github.com/numeralbank/googleuninum/workflows/CLDF-validation/badge.svg)](https://github.com/numeralbank/googleuninum/actions?query=workflow%3ACLDF-validation)
+
 ## How to cite
 
 If you use these data please cite
@@ -22,7 +24,7 @@ Conceptlists in Concepticon:
 ## Statistics
 
 
-[![Build Status](https://travis-ci.org/numeralbank/googleuninum.svg?branch=master)](https://travis-ci.org/numeralbank/googleuninum)
+[![CLDF validation](https://github.com/numeralbank/googleuninum/workflows/CLDF-validation/badge.svg)](https://github.com/numeralbank/googleuninum/actions?query=workflow%3ACLDF-validation)
 ![Glottolog: 100%](https://img.shields.io/badge/Glottolog-100%25-brightgreen.svg "Glottolog: 100%")
 ![Concepticon: 100%](https://img.shields.io/badge/Concepticon-100%25-brightgreen.svg "Concepticon: 100%")
 ![Source: 100%](https://img.shields.io/badge/Source-100%25-brightgreen.svg "Source: 100%")
